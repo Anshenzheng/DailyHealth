@@ -7,7 +7,7 @@ export interface Topic {
   title: string;
   content: string;
   createdAt: string;
-  user: {
+  user?: {
     id: number;
     username: string;
     nickname: string;
@@ -16,13 +16,14 @@ export interface Topic {
   likeCount: number;
   commentCount: number;
   comments?: Comment[];
+  isLikedByCurrentUser?: boolean;
 }
 
 export interface Comment {
   id: number;
   content: string;
   createdAt: string;
-  user: {
+  user?: {
     id: number;
     username: string;
     nickname: string;
